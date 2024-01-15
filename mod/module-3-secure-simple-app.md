@@ -42,17 +42,18 @@ This will enable real-time policy recommendation which we will come back to at t
 #### b. Apply the recommended policies into the cluster
 
 <p align="center">
-  <img src="Images/policy-recommend.png" align="center" width="1000">
+  <img src="Images/Add-policies.png" align="center" width="1000">
 </p>
 
 #### b. Monitor the staged policy
 
 <p align="center">
-  <img src="Images/policy-recommend.png" align="center" width="1000">
+  <img src="Images/monitor-staged.png" align="center" width="1000">
 </p>
 
 #### c. Enforce the recommended policy
 
 <p align="center">
-  <img src="Images/policy-recommend.png" align="center" width="1000">
+  <img src="Images/enforced-policies-a" align="center" width="1000">
+  <img src="Images/enforced-policies-b" align="center" width="1000">
 </p>
