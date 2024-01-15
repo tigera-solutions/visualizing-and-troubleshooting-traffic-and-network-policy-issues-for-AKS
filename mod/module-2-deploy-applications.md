@@ -25,7 +25,8 @@ kubectl create namespace java-app
 ### d. Deploy the application java-app to the namespace.
 
 ```bash
-kubectl apply -n hipstershop -f apps/
+kubectl apply -n java-client -f apps/java-client.yaml
+kubectl apply -n java-app -f apps/java-app.yaml
 ```
 
 ## 2. Install a complex application
@@ -60,7 +61,7 @@ kubectl create namespace hipstershop
 ### c. Deploy the application Online Boutique (Hipstershop) to the namespace. This will install the application from the Google repository.
 
 ```bash
-kubectl apply -n hipstershop -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/v0.3.9/release/kubernetes-manifests.yaml
+kubectl apply -n hipstershop -f apps/hipstershop.yaml
 ```
 
 ### d. Wait for all PODs get in a running status
@@ -84,11 +85,10 @@ redis-cart-5b569cd47-l29tx               1/1     Running   0          2m40s
 shippingservice-79849ddf8-nlfjv          1/1     Running   0          2m40s
 ```
 
-### e. Configure the ingress 
+### e. Retrieve access information for the application 
 
 ```bash
-sed -i "s,template,$(kubectl cluster-info | grep -i control | awk -F "://" '{print $2}' | cut -d. -f1),g" /home/tigera/observability-clinic/tsworkshop/workshop1/manifests/1-ingress-nginx-hipstershop.yaml
-kubectl apply -f /home/tigera/observability-clinic/tsworkshop/workshop1/manifests/1-ingress-nginx-hipstershop.yaml
+kubectl apply -f workshop1/1-lb-hipstershop.yaml
 ```
 
 ### f. Browse the URL shown in the command’s output below to test the Hipstershop Application:
