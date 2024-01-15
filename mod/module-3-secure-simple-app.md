@@ -2,7 +2,7 @@
 
 ### a. Enable Policy Recommendation in the cluster
 
-On the left hand navigation bar select the **Policies** <img src="Images/3.m1lab4-1.png"> icon
+On the left hand navigation bar select the **Policies** <img src="Images/icon-1.png" alt="Connect Cluster" width="30"> icon
 Choose **Recommendations**
 Click **Enable Policy Recommendations**
 
