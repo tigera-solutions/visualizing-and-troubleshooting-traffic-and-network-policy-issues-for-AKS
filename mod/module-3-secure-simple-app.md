@@ -54,6 +54,6 @@ This will enable real-time policy recommendation which we will come back to at t
 #### c. Enforce the recommended policy
 
 <p align="center">
-  <img src="Images/enforced-policies-a.png" align="center" width="500">
+  <img src="Images/enforced-policies-a.png" align="center" width="1000">
   <img src="Images/enforced-policies-b.png" align="center" width="500">
 </p>
