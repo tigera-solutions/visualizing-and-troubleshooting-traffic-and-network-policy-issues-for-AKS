@@ -1,9 +1,9 @@
-## 1. Install a simple application
+## 1. Secure the simple application
 
-### a. The simple application diagram is shown below: 
+### a. Enable Policy Recommendation in the cluster 
 
 <p align="center">
-  <img src="Images/1.m2lab3.png" align="center" width="1000">
+  <img src="Images/3.pr.png" align="center" width="1000">
 </p>
 
 ### b. Clone the Observability Clinic Repo and grant the executable permission for the lab's script
