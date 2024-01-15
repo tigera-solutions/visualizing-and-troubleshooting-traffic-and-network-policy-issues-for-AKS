@@ -27,18 +27,32 @@ This will enable real-time policy recommendation which we will come back to at t
 
 #### c. Check Kibana for flow-information
 
-
+<p align="center">
+  <img src="Images/kibana.png" align="center" width="1000">
+</p>
 
 ### Automated Approach revisited
 
-#### a. Apply the recommended policies into the cluster 
+#### a. Check the recommended policies  
 
 <p align="center">
-  <img src="Images/3.m1lab4-1.png" align="center" width="1000">
+  <img src="Images/policy-recommend.png" align="center" width="1000">
 </p>
 
+#### b. Apply the recommended policies into the cluster
 
-### b. Monitor the staged policy
+<p align="center">
+  <img src="Images/policy-recommend.png" align="center" width="1000">
+</p>
 
+#### b. Monitor the staged policy
 
-### c. Enforce the recommended policy
+<p align="center">
+  <img src="Images/policy-recommend.png" align="center" width="1000">
+</p>
+
+#### c. Enforce the recommended policy
+
+<p align="center">
+  <img src="Images/policy-recommend.png" align="center" width="1000">
+</p>
