@@ -1,6 +1,10 @@
 ## 1. Secure the simple application
 
-### a. Enable Policy Recommendation in the cluster 
+### a. Enable Policy Recommendation in the cluster
+
+On the left hand navigation bar select the **Policies** <img src="Images/3.m1lab4-1.png"> icon
+Choose **Recommendations**
+Click **Enable Policy Recommendations**
 
 <p align="center">
   <img src="Images/3.pr.png" align="center" width="1000">
