@@ -3,7 +3,7 @@
 ### a. The application diagram is shown below: 
 
 <p align="center">
-  <img src="Images/3.m1lab4-1.png" alt="Connect Cluster" align="center" width="1000">
+  <img src="Images/1.m2lab3.png" align="center" width="1000">
 </p>
 
 ### b. Clone the Observability Clinic Repo and grant the executable permission for the lab's script
