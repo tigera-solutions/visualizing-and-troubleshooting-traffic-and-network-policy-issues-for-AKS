@@ -48,12 +48,12 @@ This will enable real-time policy recommendation which we will come back to at t
 #### b. Monitor the staged policy
 
 <p align="center">
-  <img src="Images/monitor-staged.png" align="center" width="1000">
+  <img src="Images/monitor-staged.png" align="center" width="300">
 </p>
 
 #### c. Enforce the recommended policy
 
 <p align="center">
-  <img src="Images/enforced-policies-a" align="center" width="1000">
-  <img src="Images/enforced-policies-b" align="center" width="1000">
+  <img src="Images/enforced-policies-a.png" align="center" width="300">
+  <img src="Images/enforced-policies-b.png" align="center" width="300">
 </p>
