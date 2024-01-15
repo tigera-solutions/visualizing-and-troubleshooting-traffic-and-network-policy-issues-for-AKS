@@ -1,4 +1,4 @@
-## Module 2 - Deploy the applications
+# Module 2 - Deploy the applications
 
 ### a. The simple application diagram is shown below: 
 
