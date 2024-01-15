@@ -1,4 +1,4 @@
-## 1. Install a simple application
+## Module 2 - Deploy the applications
 
 ### a. The simple application diagram is shown below: 
 
