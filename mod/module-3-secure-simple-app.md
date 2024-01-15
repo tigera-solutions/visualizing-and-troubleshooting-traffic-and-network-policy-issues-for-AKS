@@ -1,4 +1,4 @@
-## 1. Secure the simple application
+## Module 3 - Secure the simple application
 
 ### Automated Approach
 #### a. Enable Policy Recommendation in the cluster
