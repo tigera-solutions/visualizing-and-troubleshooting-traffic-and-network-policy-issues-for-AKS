@@ -1,7 +1,7 @@
 ## 1. Secure the simple application
 
 ### Automated Approach
-####a. Enable Policy Recommendation in the cluster
+#### a. Enable Policy Recommendation in the cluster
 
 i. On the left hand navigation bar select the **Policies** <img src="Images/icon-1.png" alt="Connect Cluster" width="30"> icon </br>
 ii. Choose **Recommendations** </br>
