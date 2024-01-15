@@ -15,11 +15,15 @@ This will enable real-time policy recommendation which we will come back to at t
 ### Manual Approach
 #### a. Check Service-Graph for flow-information
 
-
+<p align="center">
+  <img src="Images/sg-flow.png" align="center" width="1000">
+</p>
 
 #### b. Check FlowViz for flow-information
 
-
+<p align="center">
+  <img src="Images/flowviz.png" align="center" width="1000">
+</p>
 
 #### c. Check Kibana for flow-information
 
