@@ -1,6 +1,6 @@
 ## 1. Install a simple application
 
-### a. The application diagram is shown below: 
+### a. The simple application diagram is shown below: 
 
 <p align="center">
   <img src="Images/1.m2lab3.png" align="center" width="1000">
@@ -31,7 +31,7 @@ kubectl apply -n java-app -f apps/java-app.yaml
 
 ## 2. Install a complex application
 
-### a. The application diagram is shown below: 
+### a. The complex application diagram is shown below: 
 
 <p align="center">
   <img src="Images/3.m1lab4-1.png" align="center" width="1000">
@@ -85,13 +85,17 @@ redis-cart-5b569cd47-l29tx               1/1     Running   0          2m40s
 shippingservice-79849ddf8-nlfjv          1/1     Running   0          2m40s
 ```
 
-### e. Retrieve access information for the application 
-
+### e. Configure access for the complex application 
+You can configure access via a LoadBalancer (**THIS WILL INCUR CHARGES**)
 ```bash
-kubectl apply -f workshop1/1-lb-hipstershop.yaml
+kubectl patch svc -n hipstershop frontend-external -p '{"spec": {"type": "LoadBalancer"}}'
+```
+Or you can run a port-forward
+```bash
+kubectl port-forward svc/frontend-external -n hipstershop 35001:80
 ```
 
-### f. Browse the URL shown in the command’s output below to test the Hipstershop Application:
+### f. Retrieve the Hipstershop Application external IP address if LoadBalancer is used:
 
 ```bash
-echo https://hipstershop.$(kubectl cluster-info | grep -i control | awk -F "://" '{print $2}' | cut -d. -f1).lynx.tigera.ca
+kubectl get svc -n hipstershop frontend-external
