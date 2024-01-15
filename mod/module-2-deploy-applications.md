@@ -18,7 +18,7 @@ chmod +x workshop1/lab-script.sh
 ### c. Create a namespace 'java-app' which the application will be deployed in:
 
 ```bash
-kubectl create namespace java-app
+kubectl create namespace java-app java-client
 ```
 
 ### d. Deploy the application java-app to the namespace.
