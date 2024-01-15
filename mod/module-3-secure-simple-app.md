@@ -1,6 +1,7 @@
 ## 1. Secure the simple application
 
-### a. Enable Policy Recommendation in the cluster
+### Automated Approach
+####a. Enable Policy Recommendation in the cluster
 
 i. On the left hand navigation bar select the **Policies** <img src="Images/icon-1.png" alt="Connect Cluster" width="30"> icon </br>
 ii. Choose **Recommendations** </br>
@@ -9,8 +10,9 @@ iii. Click **Enable Policy Recommendations** </br>
 <p align="center">
   <img src="Images/3.pr.png" align="center" width="1000">
 </p>
+This will enable real-time policy recommendation which we will come back to at the end of this module </br>
 
-### b. Clone the Observability Clinic Repo and grant the executable permission for the lab's script
+### b. Check Service-Graph for flow-information
 ```bash
 git clone https://github.com/tigera-solutions/visualizing-and-troubleshooting-traffic-and-network-policy-issues-for-AKS.git
 ```
