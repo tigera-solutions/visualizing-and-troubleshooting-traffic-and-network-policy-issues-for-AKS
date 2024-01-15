@@ -1,4 +1,4 @@
-## Module 1 - Connect your AKS cluster to Calico Cloud
+# Module 1 - Connect your AKS cluster to Calico Cloud
 
 > :warning: To complete this module, you will need a [Calico Cloud account](https://www.calicocloud.io/)
 
