@@ -110,3 +110,9 @@ cd visualizing-and-troubleshooting-traffic-and-network-policy-issues-for-AKS
 chmod +x tsworkshop/workshop1/lab-script.sh 
 ```
 We will use this script later on when we troubleshoot the complex application
+
+---
+
+[:arrow_right: Module 3 -Secure the simple application](/mod/module-3-secure-simple-app.md)  <br>
+
+[:arrow_left: Back to Main](/README.md)
