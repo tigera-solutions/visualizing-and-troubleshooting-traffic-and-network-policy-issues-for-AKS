@@ -3,8 +3,8 @@
 typeset -i OPTION
 OPTION=0
 KU="/usr/local/bin/kubectl"
-BSCRIPTS="/home/tigera/observability-clinic/tsworkshop/workshop1/.scripts/.blab"
-FSCRIPTS="/home/tigera/observability-clinic/tsworkshop/workshop1/.scripts/.flab"
+BSCRIPTS="tsworkshop/workshop1/.scripts/.blab"
+FSCRIPTS="tsworkshop/workshop1/.scripts/.flab"
 
 
 clear
