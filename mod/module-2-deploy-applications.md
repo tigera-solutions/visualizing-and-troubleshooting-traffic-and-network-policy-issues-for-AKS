@@ -10,11 +10,6 @@
 ```bash
 git clone https://github.com/tigera-solutions/visualizing-and-troubleshooting-traffic-and-network-policy-issues-for-AKS.git
 ```
-```bash
-cd visualizing-and-troubleshooting-traffic-and-network-policy-issues-for-AKS
-chmod +x tsworkshop/workshop1/lab-script.sh 
-```
-We will use this script later on when we troubleshoot the complex application
 
 ### c. Create a namespace 'java-app' which the application will be deployed in:
 
@@ -100,3 +95,17 @@ kubectl port-forward svc/frontend-external -n hipstershop 35001:80
 
 ```bash
 kubectl get svc -n hipstershop frontend-external
+
+### g. Tune the lab for Observability and troubleshooting
+
+```bash
+kubectl patch felixconfiguration default --type='merge' -p '{"spec":{"flowLogsFlushInterval":"10s"}}'
+kubectl patch felixconfiguration default --type='merge' -p '{"spec":{"flowLogsFileAggregationKindForAllowed":1}}'
+```
+These commands will send the flow logs to Calico Cloud in 10 second intervals and will also send more information on allowed flows
+
+```bash
+cd visualizing-and-troubleshooting-traffic-and-network-policy-issues-for-AKS
+chmod +x tsworkshop/workshop1/lab-script.sh 
+```
+We will use this script later on when we troubleshoot the complex application
