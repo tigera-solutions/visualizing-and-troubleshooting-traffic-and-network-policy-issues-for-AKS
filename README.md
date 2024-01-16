@@ -24,7 +24,7 @@ The estimated time to complete this workshop is 60-90 minutes.
 
 This workshop is organized in sequential modules. One module will build up on top of the previous module, so please, follow the order as proposed below.
 
-Module 1 - [Connect the AKS cluster to Calico Cloud](/mod/module-1-connect-calicocloud.md)
-Module 2 - [Deploy the Applications](/mod/module-2-deploy-applications.md)
-Module 3 - [Secure the simple application](/mod/module-3-secure-simple-app.md)
-Module 4 - [Trobleshoot the complex application](/mod/module-4-complex-app-tshoot.md)
+Module 1 - [Connect the AKS cluster to Calico Cloud](/mod/module-1-connect-calicocloud.md)c
+Module 2 - [Deploy the Applications](/mod/module-2-deploy-applications.md) </br>
+Module 3 - [Secure the simple application](/mod/module-3-secure-simple-app.md) </br>
+Module 4 - [Trobleshoot the complex application](/mod/module-4-complex-app-tshoot.md) </br>
