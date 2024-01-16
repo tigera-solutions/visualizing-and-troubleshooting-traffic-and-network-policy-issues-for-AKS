@@ -12,8 +12,9 @@ git clone https://github.com/tigera-solutions/visualizing-and-troubleshooting-tr
 ```
 ```bash
 cd visualizing-and-troubleshooting-traffic-and-network-policy-issues-for-AKS
-chmod +x workshop1/lab-script.sh 
+chmod +x tsworkshop/workshop1/lab-script.sh 
 ```
+We will use this script later on when we troubleshoot the complex application
 
 ### c. Create a namespace 'java-app' which the application will be deployed in:
 
