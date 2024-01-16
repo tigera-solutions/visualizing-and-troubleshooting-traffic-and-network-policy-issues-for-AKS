@@ -11,51 +11,27 @@ clear
 while [ $OPTION -ne 99 ]
 do
 
-  echo ""	
+  echo ""
   echo " ---------------------------- Break Scripts"
   echo ""
   echo "################################################################################"
   echo "#                                                                              #"
   echo "# 1 - Demo Break Online Boutique - Dynamic Service and Threat Graph            #"
   echo "#                                                                              #"
-  echo "# 2 - LAB Break Online Boutique - Dynamic Service and Threat Graph             #"
-  echo "#                                                                              #"
-  echo "# 3 - Demo Break Online Boutique - Flow Visualisation                          #"
-  echo "#                                                                              #"
   echo "# 4 - LAB Break Online Boutique - Flow Visualisation                           #"
-  echo "#                                                                              #"
-  echo "# 5 - Demo Break Online Boutique - Kibana                                      #"
   echo "#                                                                              #"
   echo "# 6 - LAB Break Online Boutique - Kibana                                       #"
   echo "#									       #"
-  echo "# 7 - Demo Change Ingress Rule to Deny Track iptables rules                    #"
-  echo "#                                                                              #"
-  echo "# 8 - LAB Break Online Boutique - Flow Logs                                    #"
-  echo "#                                                                              #"
-  echo "# 9 - LAB Break HEP non-k8s                                                    #"
-  echo "#                                                                              #"
-  echo "# 10 - Demo Break Fortinet Integration                                         #"
-  echo "#                                                                              #"
   echo "################################################################################"
   echo ""
   echo " ---------------------------- Fix Scripts"
   echo ""
   echo "################################################################################"
   echo "#                                                                              #"
-  echo "# 21 - LAB Fix Online Boutique - Dynamic Service and Threat Graph              #"
-  echo "#                                                                              #"
   echo "# 41 - LAB Fix Online Boutique - Flow Visualisation                            #"
   echo "#                                                                              #"
   echo "# 61 - LAB Fix Online Boutique - Kibana                                        #"
   echo "#                                                                              #"
-  echo "# 71 - Demo Revert to Allow Track iptables rules                               #"
-  echo "#                                                                              #"
-  echo "# 81 - LAB Fix Online Boutique - Flow Logs                                     #"
-  echo "#                                                                              #"
-  echo "# 91 - LAB Fix HEP non-k8s                                                     #"
-  echo "#                                                                              #"
-  echo "# 101 - Demo Fix HEP Fortinet Integration                                      #"
-  echo "#                                                                              #"  
   echo "################################################################################"
   echo ""
   echo "99 - Exit"
@@ -63,63 +39,15 @@ do
   read  -p "Enter the option: " OPTION
 
   case $OPTION in
-	1|2|4|6|7|8)
+	1|4|6)
                 $KU replace -f $BSCRIPTS$OPTION".yaml" > /dev/null
                 echo ""
                 read -p "------------- Press any key to continue"
                 clear
-                ;; 
-	3|5)
-		$KU replace -f $BSCRIPTS$OPTION".yaml" > /dev/null
-                echo ""
-		$KU rollout restart daemonset ingress-nginx-controller -n ingress-nginx > /dev/null
-		echo "------------- Waiting for the config to be applied"
-		sleep 80
-		echo ""
-                read -p "------------- Press any key to continue"
-                clear
                 ;;
-	9)
-		sudo sed -i 's/FELIX_FAILSAFEOUTBOUNDHOSTPORTS=\"tcp:0.0.0.0\/0:22,/FELIX_FAILSAFEOUTBOUNDHOSTPORTS=\"/g' /etc/calico/calico.env 
-		sudo systemctl restart calico.service 
-		$KU replace -f $BSCRIPTS$OPTION".yaml" > /dev/null
-                echo ""
-                read -p "------------- Press any key to continue"
-                clear
-                ;;	
-        10)	
-		$KU delete deployment tigera-firewall-controller -n tigera-firewall-controller > /dev/null 2>&1 
-		$KU  delete secrets tigera-pull-secret -n tigera-firewall-controller  > /dev/null 2>&1
-		sleep 3
-		if [[ -z $(ssh worker1 sudo docker image ls | grep firewall-integration) ]]
-	       	then 
-			$(ssh worker2 sudo docker image rm $(ssh worker2 sudo docker image ls | grep firewall-integration | awk '{print $3}')) > /dev/null 2>&1
-	       	else 
-			$(ssh worker1 sudo docker image rm $(ssh worker1 sudo docker image ls | grep firewall-integration | awk '{print $3}')) > /dev/null 2>&1 
-		fi
-		$KU apply -f https://docs.tigera.io/manifests/fortinet.yaml > /dev/null 2>&1 
-		echo ""
-                read -p "------------- Press any key to continue"
-                clear
-                ;;
-	21|41|61|71|81)
+	41|61)
                 $KU replace -f $FSCRIPTS$OPTION".yaml" > /dev/null
                 echo ""
-                read -p "------------- Press any key to continue"
-                clear
-                ;;
-	91)
-		sudo sed -i 's/FELIX_FAILSAFEOUTBOUNDHOSTPORTS=\"/FELIX_FAILSAFEOUTBOUNDHOSTPORTS=\"tcp:0.0.0.0\/0:22,/g' /etc/calico/calico.env
-		sudo systemctl restart calico.service
-                $KU replace -f $FSCRIPTS$OPTION".yaml" > /dev/null
-                echo ""
-                read -p "------------- Press any key to continue"
-                clear
-                ;;
-	101)
-		$KU create secret generic tigera-pull-secret  --from-file=.dockerconfigjson=/home/tigera/config.json  --type=kubernetes.io/dockerconfigjson -n tigera-firewall-controller > /dev/null 2>&1 
-		$KU rollout restart deployment tigera-firewall-controller -n tigera-firewall-controller > /dev/null 2>&1 
-		echo ""
                 read -p "------------- Press any key to continue"
                 clear
                 ;;
