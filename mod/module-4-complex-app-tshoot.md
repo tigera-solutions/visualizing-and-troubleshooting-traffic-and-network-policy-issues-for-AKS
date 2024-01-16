@@ -21,8 +21,8 @@ For more information about tiers, please refer to the Calico Cloud documentation
 ## 2. Setup the tiers and policies
 
 ```bash
-kubectl apply -f /tsworkshop/workshop1/manifests/tiers.yaml
-kubectl apply -f /tsworkshop/workshop1/manifests/tshoot-policies.yaml
+kubectl apply -f tsworkshop/workshop1/manifests/tiers.yaml
+kubectl apply -f tsworkshop/workshop1/manifests/tshoot-policies.yaml
 ```
 
 ## 3. Identify denied flows using Service Graph
