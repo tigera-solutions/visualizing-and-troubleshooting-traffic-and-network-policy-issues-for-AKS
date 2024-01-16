@@ -30,7 +30,7 @@ kubectl apply -f tsworkshop/workshop1/manifests/tshoot-policies.yaml
 #### a. Run the script below:
 
 ```bash
-/tsworkshop/workshop1/lab-script.sh
+tsworkshop/workshop1/lab-script.sh
 ```
 
 #### b. Typing the option “1” (Demo Break Online Boutique - Dynamic Service and Threat Graph) and press “Enter”
@@ -77,7 +77,7 @@ failed to complete the order
 #### a. Open the lab and run the script below:
 
 ```bash
-/tsworkshop/workshop1/lab-script.sh
+tsworkshop/workshop1/lab-script.sh
 ```
 
 #### b. Type the option “4” (LAB Break Online Boutique - Flow Visualizations) and press “Enter”
@@ -115,7 +115,7 @@ failed to complete the order
 #### a. Open the lab and run the script below:
 
 ```bash
-/tsworkshop/workshop1/lab-script.sh
+tsworkshop/workshop1/lab-script.sh
 ```
 
 #### b. Type the option “6” (LAB Break Online Boutique - Kibana) and press “Enter”
