@@ -95,6 +95,7 @@ kubectl port-forward svc/frontend-external -n hipstershop 35001:80
 
 ```bash
 kubectl get svc -n hipstershop frontend-external
+```
 
 ### g. Tune the lab for Observability and troubleshooting
 
