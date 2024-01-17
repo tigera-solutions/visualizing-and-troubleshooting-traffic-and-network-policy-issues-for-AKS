@@ -107,7 +107,6 @@ kubectl patch felixconfiguration default --type='merge' -p '{"spec":{"flowLogsFi
 These commands will send the flow logs to Calico Cloud in 10 second intervals and will also send more information on allowed flows
 
 ```bash
-cd visualizing-and-troubleshooting-traffic-and-network-policy-issues-for-AKS
 chmod +x tsworkshop/workshop1/lab-script.sh 
 ```
 We will use this script later on when we troubleshoot the complex application
