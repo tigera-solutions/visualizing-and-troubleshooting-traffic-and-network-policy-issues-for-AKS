@@ -3,7 +3,7 @@
 
 ## 1. Calico Policy and Tier flows
 
-Tiers are a hierarchical construct used to group policies and enforce higher precedence policies that other teams cannot circumvent, providing the basis for **Identity-aware micro-segmentation**.
+Tiers are a hierarchical construct used to group policies and enforce higher-precedence policies that other teams cannot circumvent, providing the basis for **Identity-aware micro-segmentation**.
 
 All Calico and Kubernetes security policies reside in tiers. You can start “thinking in tiers” by grouping your teams and the types of policies within each group, such as security, platform, etc.
 
@@ -15,6 +15,12 @@ Two mechanisms drive how traffic is processed across tiered policies:
 
 - Labels and selectors
 - Policy action rules
+
+Tier fundamentals to remember
+
+- Flows will only enter a tier if a policy in the tier selects the workload. Otherwise, the tier will be skipped
+- Once a flow enters a tier, it will live or die in that tier unless PASSed out
+- If no policy in the tiers has a rule that matches the flow, the flow will be implicitly denied by the last policy that selected the workload
 
 For more information about tiers, please refer to the Calico Cloud documentation [Understanding policy tiers](https://docs.calicocloud.io/get-started/tutorials/policy-tiers)
 
