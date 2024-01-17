@@ -497,3 +497,26 @@ spec:
           - "8080"
   types:
     - Egress
+
+---
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: default.default-deny
+spec:
+  tier: default
+  order: 1100
+  selector: ''
+  namespaceSelector: ''
+  serviceAccountSelector: ''
+  ingress:
+    - action: Deny
+      source: {}
+      destination: {}
+  egress:
+    - action: Deny
+      source: {}
+      destination: {}
+  types:
+    - Ingress
+    - Egress
