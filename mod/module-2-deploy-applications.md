@@ -9,6 +9,7 @@
 ### b. Clone the Observability Clinic Repo and grant the executable permission for the lab's script
 ```bash
 git clone https://github.com/tigera-solutions/visualizing-and-troubleshooting-traffic-and-network-policy-issues-for-AKS.git
+cd visualizing-and-troubleshooting-traffic-and-network-policy-issues-for-AKS
 ```
 
 ### c. Create a namespace 'java-app' which the application will be deployed in:
